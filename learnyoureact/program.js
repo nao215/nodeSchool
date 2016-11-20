@@ -35,7 +35,7 @@ app.use('/bundle.js', function (req, res) {
             presets: ["react", "es2015"],
             compact: false
         }))
-        .require("isomorphic/solution/app.js", {entry: true})
+        .require("./app.js", {entry: true})
         .bundle()
         .pipe(res);
 });
